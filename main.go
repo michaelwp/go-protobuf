@@ -22,7 +22,7 @@ func main(){
 func printRes(p *pb.Person) {
 	p1 := &pb.Person{}
 	body, _ := proto.Marshal(p)
-	_ = proto.Unmarshal(body, p)
+	_ = proto.Unmarshal(body, p1)
 	jsonRes, _ := json.Marshal(p)
 
 	fmt.Println("Original struct loaded from proto file: ", p, "\n")
